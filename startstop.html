@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Start-Stop Page</title>
+	<link rel="stylesheet" type="text/css" href="style/style1.css">
+</head>
+<body>
+	<header>
+            <div class="heading">
+                <h1>Sign and Gesture Recognition System</h1>
+            </div>
+        </header>
+        <!--Stream Video via webcam-->
+        <div class="video-and-screenshot">
+        <div class="video-wrap">
+            <video id="video" playsinline autoplay></video>
+        </div>
+        <div class="screenshot">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+        <!--Trigger canvas Web API-->
+        <div class="buttons-container">
+            <button class="buttons" id="start" onclick="window.location.href='experience.html';">Start</button>
+            <button class="buttons" id="capture" onclick="alert('Please Press Start First');">Capture</button>
+            <button class="buttons" id="stop" onclick="alert('Already in Stop Mode');">Stop</button>
+        </div>
+
+</body>
+</html>

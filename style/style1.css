@@ -1,0 +1,87 @@
+body{
+	margin: 0;
+	padding:0;
+	background-image: url(
+		https://images.pexels.com/photos/1724376/pexels-photo-1724376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+	);
+	background-color: #48b1bf;
+}
+.heading{
+	
+	border-bottom: #46344e 3px solid;
+	border-top: #46344e 3px solid; 
+	background-image: url(
+		https://images.pexels.com/photos/1724376/pexels-photo-1724376.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+	);
+	
+}
+.heading h1{
+	font-family: Helvetica;
+	text-align: center;
+	color: white;
+}
+.video-and-screenshot{
+	margin:10px;
+	border:#46344e 3px solid;
+	padding: 5px;
+	width: auto;
+	height: 400px;
+	text-align: center;
+}
+.video-and-screenshot .video-wrap{
+	border:#46344e 3px solid;
+	background-color: black;
+	width: 49%;
+	height: 390px;
+	display: inline-block;
+	border-radius: 1.5em;
+	float: left;/*******/
+	overflow: hidden;
+}
+.video-and-screenshot .video-wrap #video{
+	border: #46344e 3px solid;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient( #5C258D,#4389A2);
+
+}
+.video-and-screenshot .screenshot #canvas{
+	border: #46344e 3px solid;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient( #5C258D,#4389A2);
+
+
+
+}
+.video-and-screenshot .screenshot{
+	border:#46344e 3px solid;
+	background-color: black;
+	width: 49%;
+	height: 390px;
+	display: inline-block;
+	border-radius: 1.5em;
+	float: right;/******/
+	overflow: hidden;
+}
+
+.buttons{
+	padding: 30px;
+	font-size: 20px;
+	color: white;
+	padding-bottom: -20px;
+	padding-top: 5px;
+
+}
+.buttons-container{
+
+	text-align: center;
+}
+.buttons-container .buttons{
+	background-color: black;
+	height: 40px;
+	width: auto;
+	font-family: Arial;
+	border: #46344e 3px solid;
+	border-radius: 0.5em;
+}

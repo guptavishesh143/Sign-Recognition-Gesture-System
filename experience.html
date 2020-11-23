@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capture Page</title>
+        <link rel="stylesheet" type="text/css" href="style/style1.css">
+    </head>
+
+
+    <body>
+        <header>
+            <div class="heading" style="padding: 10px;font-size:34px;">
+                <h1>Sign and Gesture Recognition System</h1>
+            </div>
+        </header>
+        <!--Stream Video via webcam-->
+        <div class="video-and-screenshot">
+        <div class="video-wrap">
+            <video id="video" playsinline autoplay></video>
+        </div>
+        <div class="screenshot">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+        <!--Trigger canvas Web API-->
+        <div class="buttons-container">
+            <button class="buttons" id="start" onclick="alert('Already in Start Mode');">Start</button>
+            <button class="buttons" id="capture">Capture</button>
+            <button class="buttons" id="stop" onclick="window.location.href='startstop.html';">Stop</button>
+        </div>
+
+        <script>
+            
+            'use strict';
+
+            const video=document.getElementById('video');
+            const canvas=document.getElementById('canvas');
+            const snap=document.getElementById('capture');
+            const start=document.getElementById('start');
+            const errorMsgElement=document.getElementById('span#ErrorMsg');
+
+            const constraints={
+                audio:false,
+                video:{
+                    width:1400, height:800
+                }
+            };
+            // Access Webcam
+            async function init(){
+                try{
+                    const stream=await navigator.mediaDevices.getUserMedia(constraints);
+                    handleSuccess(stream);
+                }
+                catch(e){
+                    errorMsgElement.innerHTML=`navigator.getUserMedia.error:${e.toString()}`;
+                }
+            }
+
+            //Success
+            function handleSuccess(stream){
+                window.stream=stream;
+                video.srcObject=stream;
+            }
+
+            //Load init
+            init();
+            
+
+            //Draw image
+            var context=canvas.getContext('2d');
+            snap.addEventListener("click",function(){
+                context.drawImage(video,0,0,300,150);
+            });
+
+
+        </script>
+
+    </body>
+</html>
